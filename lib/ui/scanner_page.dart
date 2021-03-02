@@ -60,11 +60,12 @@ class _ScannerPageState extends State<ScannerPage> {
                         )
                       : Center(child: Text("Camera inactive"))),
               Text(qr ?? " ",
-                  style: TextStyle(fontSize: 50.0, color: GREEN_COLOR)),
+                  style: TextStyle(
+                      fontSize: BIG_LETTERS_SIZE, color: GREEN_COLOR)),
               Padding(
                 padding: EdgeInsets.all(15),
                 child: SizedBox(
-                  height: 100.0,
+                  height: BIG_LETTERS_SIZE * 2,
                   width: double.infinity,
                   child: RaisedButton(
                       elevation: 5.0,
@@ -73,7 +74,8 @@ class _ScannerPageState extends State<ScannerPage> {
                           borderRadius: BorderRadius.circular(20.0)),
                       color: BLACK_COLOR,
                       child: Text('Scan',
-                          style: TextStyle(fontSize: 50.0, color: GREEN_COLOR)),
+                          style: TextStyle(
+                              fontSize: BIG_LETTERS_SIZE, color: GREEN_COLOR)),
                       onPressed: () {
                         setState(() {
                           camState = !camState;

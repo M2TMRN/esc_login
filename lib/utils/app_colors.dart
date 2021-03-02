@@ -9,3 +9,9 @@ ButtonThemeData buttonThemeData = ButtonThemeData(
   buttonColor: BLACK_COLOR,
   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
 );
+
+const BIG_LETTERS_SIZE = 40.0;
+const MIDDLE_LETTERS_SIZE = 30.0;
+const SMALL_LETTERS_SIZE = 20.0;
+
+

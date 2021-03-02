@@ -105,14 +105,14 @@ class _LoginPageState extends State<LoginPage> {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 0.0),
       child: ListTile(
-        title:
-            Text(PASSWORD, style: TextStyle(fontSize: 50.0, color: RED_COLOR)),
+        title: Text(PASSWORD,
+            style: TextStyle(fontSize: BIG_LETTERS_SIZE, color: RED_COLOR)),
         subtitle: TextFormField(
           maxLines: 1,
           obscureText: true,
           autofocus: false,
           cursorColor: RED_COLOR,
-          style: TextStyle(fontSize: 50.0),
+          style: TextStyle(fontSize: BIG_LETTERS_SIZE),
           decoration: _inputDecoration(RED_COLOR),
           controller: _passwordFormController,
           validator: (value) =>
@@ -146,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
     return Padding(
         padding: EdgeInsets.fromLTRB(0.0, 45.0, 0.0, 0.0),
         child: SizedBox(
-          height: 100.0,
+          height: BIG_LETTERS_SIZE * 2,
           width: double.infinity,
           child: RaisedButton(
               elevation: 5.0,
@@ -156,7 +156,8 @@ class _LoginPageState extends State<LoginPage> {
               color: BLACK_COLOR,
               child: Text('Login',
                   style: TextStyle(
-                      fontSize: 50.0, color: _color(_isLoginButtonEnabled))),
+                      fontSize: BIG_LETTERS_SIZE,
+                      color: _color(_isLoginButtonEnabled))),
               onPressed: () {
                 if (_isLoginButtonEnabled)
                   navigate(context, ScannerPage());
@@ -169,7 +170,8 @@ class _LoginPageState extends State<LoginPage> {
     return FlatButton(
       child: Text(FORGOT_PASSWORD,
           textAlign: TextAlign.right,
-          style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.w300)),
+          style: TextStyle(
+              fontSize: MIDDLE_LETTERS_SIZE, fontWeight: FontWeight.w300)),
       onPressed: _changeFormToAlternative,
     );
   }
@@ -205,10 +207,10 @@ class _LoginPageState extends State<LoginPage> {
     return ListTile(
       title: Text(
         QUESTION[ind],
-        style: TextStyle(fontSize: 50),
+        style: TextStyle(fontSize: BIG_LETTERS_SIZE),
       ),
       subtitle: TextFormField(
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: BIG_LETTERS_SIZE),
           maxLines: 1,
           obscureText: false,
           autofocus: false,
@@ -230,8 +232,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _icon(bool correct) {
     return !correct
-        ? Icon(Icons.clear, color: RED_COLOR, size: 50,)
-        : Icon(Icons.check, color: GREEN_COLOR, size: 50,);
+        ? Icon(Icons.clear, color: RED_COLOR, size: BIG_LETTERS_SIZE)
+        : Icon(Icons.check, color: GREEN_COLOR, size: BIG_LETTERS_SIZE);
   }
 
   Color _color(bool correct) {
