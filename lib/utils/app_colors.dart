@@ -10,8 +10,9 @@ ButtonThemeData buttonThemeData = ButtonThemeData(
   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
 );
 
-const BIG_LETTERS_SIZE = 40.0;
-const MIDDLE_LETTERS_SIZE = 30.0;
+const BIG_LETTERS_SIZE = 36.0;
+const MIDDLE_LETTERS_SIZE = 28.0;
 const SMALL_LETTERS_SIZE = 20.0;
+const TEXT_SCALE_FACTOR = 1.33;
 
 

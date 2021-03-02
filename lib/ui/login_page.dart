@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
         trailing: Icon(
           Icons.lock,
           color: RED_COLOR,
-          size: 50,
+          size: BIG_LETTERS_SIZE,
         ),
       ),
     );
@@ -130,6 +130,7 @@ class _LoginPageState extends State<LoginPage> {
   InputDecoration _inputDecoration(Color color, {Icon icon}) {
     return InputDecoration(
       icon: icon,
+      errorStyle: TextStyle(fontSize: SMALL_LETTERS_SIZE),
       enabledBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: color),
       ),

@@ -38,7 +38,9 @@ class _ScannerPageState extends State<ScannerPage> {
                             child: QrCamera(
                               onError: (context, error) => Text(
                                 error.toString(),
-                                style: TextStyle(color: RED_COLOR),
+                                style: TextStyle(
+                                    color: RED_COLOR,
+                                    fontSize: MIDDLE_LETTERS_SIZE),
                               ),
                               qrCodeCallback: (code) {
                                 setState(() {
@@ -58,7 +60,11 @@ class _ScannerPageState extends State<ScannerPage> {
                             ),
                           ),
                         )
-                      : Center(child: Text("Camera inactive"))),
+                      : Center(
+                          child: Text("Camera inactive",
+                              style: TextStyle(
+                                  color: GREEN_COLOR,
+                                  fontSize: MIDDLE_LETTERS_SIZE)))),
               Text(qr ?? " ",
                   style: TextStyle(
                       fontSize: BIG_LETTERS_SIZE, color: GREEN_COLOR)),
@@ -75,7 +81,8 @@ class _ScannerPageState extends State<ScannerPage> {
                       color: BLACK_COLOR,
                       child: Text('Scan',
                           style: TextStyle(
-                              fontSize: BIG_LETTERS_SIZE, color: GREEN_COLOR)),
+                              fontSize: BIG_LETTERS_SIZE,
+                              color: GREEN_COLOR)),
                       onPressed: () {
                         setState(() {
                           camState = !camState;
